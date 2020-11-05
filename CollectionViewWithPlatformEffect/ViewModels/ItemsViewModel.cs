@@ -7,16 +7,17 @@ using Xamarin.Forms;
 
 using CollectionViewWithPlatformEffect.Models;
 using CollectionViewWithPlatformEffect.Views;
+using System.Collections.Generic;
 
 namespace CollectionViewWithPlatformEffect.ViewModels
 {
     public class ItemsViewModel 
     {
-        public ObservableCollection<Item> Items { get; }
+        public List<Item> Items { get; }
 
         public ItemsViewModel()
         {
-            Items = new ObservableCollection<Item>
+            Items = new List<Item>
             {
                 new Item { Title = "Item 1", Color=Color.Aqua},
                 new Item { Title = "Item 2", Color=Color.Brown},
@@ -33,8 +34,6 @@ namespace CollectionViewWithPlatformEffect.ViewModels
                 new Item { Title = "Item 13", Color=Color.Green},
                 new Item { Title = "Item 14", Color=Color.Orange},
                 new Item { Title = "Item 15", Color=Color.Violet},
-
-
             };
         }
     }
